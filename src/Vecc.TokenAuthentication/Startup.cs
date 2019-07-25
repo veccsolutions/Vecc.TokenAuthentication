@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Vecc.TokenAuthentication.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Vecc.TokenAuthentication.Services;
 
 namespace Vecc.TokenAuthentication
 {
@@ -38,9 +39,17 @@ namespace Vecc.TokenAuthentication
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDefaultIdentity<IdentityUser>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication()
+                .AddJwtBearer((options) =>
+                {
+                    //options.Events.OnMessageReceived = CustomTokenValidator.MessageReceivedEvent;
+                    options.SecurityTokenValidators.Add(new CustomTokenValidator());
+                });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
