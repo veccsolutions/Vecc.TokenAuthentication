@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vecc.TokenAuthentication", "src\Vecc.TokenAuthentication\Vecc.TokenAuthentication.csproj", "{BA39EA4A-1839-49A6-9239-E38699F53205}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA39EA4A-1839-49A6-9239-E38699F53205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA39EA4A-1839-49A6-9239-E38699F53205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA39EA4A-1839-49A6-9239-E38699F53205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA39EA4A-1839-49A6-9239-E38699F53205}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A562767-60B9-42F7-979E-215308C07346}
+	EndGlobalSection
+EndGlobal
